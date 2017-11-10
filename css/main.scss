@@ -447,7 +447,7 @@ a {
 .splash-section-1 {
   color: $white;
   text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  min-height: 35rem;
+  min-height: 90vh;
   width: 100vw;
   padding: 100px 0 0 0;
   box-shadow: 0px 40px 50px rgba(0, 0, 0, 0.1),
@@ -456,7 +456,7 @@ a {
 }
 
 .splash-section-2 {
-    min-height: 30rem;
+    min-height: 120vh;
     width: 100vw;
     padding: 100px 0 0 0;
 }
@@ -543,11 +543,22 @@ a.anchor {
 #st-sign {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   height: 5rem;
-  transform: rotate(-20deg);
+  transform: rotate(-10deg);
   opacity: 1;
   float: right;
   margin: 10rem 5rem 1rem 0;
   border-radius: .45em;
+
+}
+
+#flyer {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0);
+  height: 20rem;
+  transform: rotate(20deg);
+  opacity: 1;
+  float: right;
+  margin: 5rem 10rem 0 0;
+  border-radius: 0em;
 
 }
 
