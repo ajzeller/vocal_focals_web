@@ -1,0 +1,35 @@
+- name: Taryn Trusty
+  title: Project Manager
+  subtitle: Quality Control & Testing
+  image: taryn
+  linkedin: #
+
+- name: Andrew Zeller
+  title: Technical Manager
+  subtitle: Software Lead
+  image: andrew
+  linkedin: andrewjzeller
+
+- name: Haley Patterson
+  title: Publicity and Communication
+  subtitle: Mechanical Design
+  image: haley
+  linkedin: haleypatterson2017
+
+- name: Jay Napp
+  title: Research Lead
+  subtitle: Fabrication & Prototyping
+  image: jay
+  linkedin: james-napp-ua
+
+- name: Mariah Louderbach
+  title: Camera Operations
+  subtitle: System Design
+  image: mariah
+  linkedin: mariah-louderback-2017
+
+- name: Chris Odom
+  title: Finance
+  subtitle: Power and Heat Transfer
+  image: chris
+  linkedin: christopher-odom-2017

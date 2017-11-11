@@ -7,11 +7,73 @@ permalink: /docs
 
 <div class="container-fluid splash-section-1 no-side-padding">
   <div class="container">
-    <p>
-      There's nothing here yet.
+    <h4><a id="A_wearable_text_recognition_device_for_the_visually_impaired_2"></a>A wearable text recognition device for the visually impaired.</h4>
+    <h5><a id="Made_using_the_Raspberry_Pi_and_Google_Cloud_Vision_API_4"></a><em>Made using the Raspberry Pi and Google Cloud Vision API.</em></h5>
+    <p><a href="https://vocalfocals.com">vocalfocals.com</a></p>
+    <hr>
+    <p>This tutorial will walk through setting up a Raspberry Pi Zero W with the Google Cloud Vision API to detect text in an environment and then relay that text to the wearer over audio.</p>
+    <p>Ingredients you will need:</p>
+    <ul>
+    <li>1 x Raspberry Pi Zero W</li>
+    <li>1 x microSD card</li>
+    <li>1 x microUSB cable</li>
+    <li>1 x <a href="http://a.co/gOyJ8m6">Raspberry Pi Camera Module v2</a></li>
+    <li>1 x <a href="http://a.co/eIHAlxn">microUSB to USB adapter</a></li>
+    <li>1 x <a href="http://a.co/1Pvllqo">USB to audio adapter</a></li>
+    </ul>
+    <p>This tutorial will assume that you are working on a mac or linux computer.</p>
+    <p>If you have already setup your Raspberry Pi and installed git, jump to part 3 to set up VocalFocals.</p>
+    <h4><a id="1_Raspberry_Pi_initial_setup_24"></a>1) Raspberry Pi initial setup</h4>
+    <p>With a factory Pi Zero W, you can follow <a href="https://www.losant.com/blog/getting-started-with-the-raspberry-pi-zero-w-without-a-monitor">this tutorial</a> to first setup the Raspberry Pi.</p>
+    <p>If you are unable to connect to wifi following this tutorial, you can follow <a href="https://blog.gbaman.info/?p=791">this quick tutorial</a> to ssh into your Raspberry Pi using USB-OTG.</p>
+    <p>Note that the factory credentials for the Raspberry Pi are:</p>
+      <pre class="prettyprint"><code>
+      Username: pi
+      Password: raspberry
+      </code></pre>
+    <h4><a id="2_Raspberry_Pi_housekeeping_36"></a>2) Raspberry Pi housekeeping</h4>
+    <p>You will need to do some housekeeping on the Raspberry Pi.</p>
+    <pre><code>sudo raspi-config
+    </code></pre>
+    <p>In <em>Interfacing Options</em>, enable the camera, enable SSH, and enable VNC server if they are not already enabled.</p>
+    <p><a href="https://www.realvnc.com/en/connect/download/viewer/">Install VNC viewer</a> on your computer to remotely view the Raspberry Pi’s screen.</p>
+    <h4><a id="3_Install_git_on_your_Raspberry_Pi_48"></a>3) Install git on your Raspberry Pi</h4>
+    <p>Create a <a href="https://github.com/">GitHub</a> account.</p>
+    <pre><code>$ sudo apt-get install git
+    </code></pre>
+    <p>Configure your name:</p>
+    <pre><code>git config --global user.name &quot;Your Name&quot;
+    </code></pre>
+    <p>Configure your email:</p>
+    <pre><code>git config --global user.email <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="345159555d5874514c55594458511a575b59">[email&#160;protected]</a>
+    </code></pre>
+    <h4><a id="4_Google_Cloud_Platform_setup_67"></a>4) Google Cloud Platform setup</h4>
+    <p>To detect text in the image captured by the Raspberry Pi, we will use the Google Cloud Vision (GCV) API on the Google Cloud Platform. While this is a paid product, Google offers 1000 API calls for free each month, enough to experience the concept in action.</p>
+    <p><a href="https://console.cloud.google.com/freetrial">Create a Google Cloud Platform account.</a></p>
+    <p>…</p>
+    <h4><a id="5_Prepare_the_Raspberry_Pi_for_GCV_75"></a>5) Prepare the Raspberry Pi for GCV</h4>
+    <p>In the /home/pi/ directory, run:</p>
+    <pre><code>git clone https://github.com/ajzeller/vocal_focals.git
+    </code></pre>
+    <p>You will need to upgrade Pip, the package manager for python installations:</p>
+    <pre><code>sudo pip install --upgrade pip
+    </code></pre>
+    <pre><code>sudo apt-get install libjpeg8-dev
+    </code></pre>
+    <p>Next, you will install the Google API Python Client:</p>
+    <pre><code>sudo pip install --upgrade google-api-python-client
+    </code></pre>
+    <p>Next, install Python Imaging Library:</p>
+    <pre><code>sudo pip install --upgrade Pillow
+    </code></pre>
+    <p>Install Python PiCamera:</p>
+    <pre><code>sudo apt-get install python-picamera
+    </code></pre>
+    <p>Install mpg321, a command line .mp3 player:</p>
+    <pre><code>sudo apt-get -y install mpg321
+    </code></pre>
+    <p><em>[API key JSON stuff here]</em></p>
 
-      Coming soon...
-    </p>
 
   </div>
 

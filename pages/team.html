@@ -3,16 +3,49 @@ layout: default
 title: Team
 permalink: /team
 
+
 ---
 
-<div class="container-fluid splash-section-1 no-side-padding">
-  <div class="container">
+<div class="container container--team">
+  <div class="container header--team">
+    <h4>Our Team</h4>
     <p>
-      There's nothing here yet.
-
-      Coming soon...
+      <i class="fa fa-globe" aria-hidden="true"></i> Distributed across Alabama & California
+        <i class="fa fa-graduation-cap" aria-hidden="true"></i> Senior mechanical engineering students
     </p>
-
   </div>
 
+  <div class="row">
+
+     {% for member in site.data.team %}
+       <div class="col-md-6">
+         <div class="container--team-member" >
+           <div class="row">
+             <div class="col-md-5">
+               <div class="container container__team-member-photo">
+                 <img src="{{ site.url }}/assets/images/{{ member.image }}.png" class="image image--team-member"/>
+               </div>
+             </div>
+             <div class="col-md-7">
+               <h4>{{ member.name}}
+                  <a href="https://www.linkedin.com/in/{{ member.linkedin }}/" target="_blank">
+                    <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                  </a>
+                </h4>
+
+               <hr>
+               <h5>{{ member.title }}</h5>
+               <p>
+                 {{ member.subtitle }}
+               </p>
+
+             </div>
+         </div>
+       </div>
+
+
+       </div>
+     {% endfor %}
+
+   </div>
 </div>
