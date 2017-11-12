@@ -129,11 +129,11 @@ pre {
 
 
 .container--gradient-bg {
-  background: $theme-primary; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient($capgemini-blue, $gradient-bottom); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient($capgemini-blue, $gradient-bottom); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient($capgemini-blue, $gradient-bottom); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(90deg, $theme-primary, $theme-primary); /* Standard syntax */
+  background-color: $theme-primary; /* For browsers that do not support gradients */
+  //   background: -webkit-linear-gradient($capgemini-blue, $gradient-bottom); /* For Safari 5.1 to 6.0 */
+  //   background: -o-linear-gradient($capgemini-blue, $gradient-bottom); /* For Opera 11.1 to 12.0 */
+  //   background: -moz-linear-gradient($capgemini-blue, $gradient-bottom); /* For Firefox 3.6 to 15 */
+  //   background: linear-gradient(90deg, $theme-primary, $theme-primary); /* Standard syntax */
 }
 
 /*Navigation*/
@@ -158,12 +158,16 @@ pre {
       color: $black;
       text-transform: uppercase;
       text-shadow: 0px 1px 10px rgba(0, 0, 0, 0);
-    }
+      -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+      transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 
-    a:hover {
-      color: $black;
-    }
+      &:hover {
+        transform: translateY(-2px);
 
+
+      }
+
+    }
 
   }
 
@@ -309,7 +313,7 @@ pre {
 .container--hero {
   color: $white;
   text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  min-height: 100vh;
+  min-height: 92vh;
   width: 100vw;
   padding: 100px 0 0 0;
   box-shadow: 0px 40px 50px rgba(0, 0, 0, 0.1);
@@ -320,7 +324,15 @@ pre {
 .splash-section-2 {
     min-height: 100vh;
     width: 100vw;
-    padding: 100px 0 0 0;
+    padding: 0px 0 0 0;
+
+    .row {
+      margin: 2rem 0 0 0;
+    }
+
+    // .col {
+    //   margin: 0rem 0 0 0;
+    // }
 }
 
 .container--team {
@@ -334,13 +346,14 @@ pre {
 }
 
 .container--team-member {
-  background-color: $off-white;
+  background-color: $white;
   width: 90%;
-  margin: 0 auto 1rem auto;
+  margin: 0 auto 2rem auto;
   padding: 1rem;
   border: 0px solid $light-grey-border;
   border-radius: 0.5rem;
   min-height: 200px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
 }
 
 .container__team-member-photo {
@@ -350,8 +363,8 @@ pre {
 
 // Headers
 
-.header--team {
-  margin: 2rem auto 1rem auto;
+.header {
+  margin: 2rem auto 2rem auto;
   text-align: center;
   h4 {
     color: $black;
@@ -359,6 +372,10 @@ pre {
 
   p {
     color: $grey-text;
+  }
+
+  .fa {
+    color: $light-grey-border;
   }
 }
 
@@ -422,17 +439,17 @@ a.anchor {
 // assets
 
 .image {
-  display: block;
+  // display: block;
 }
 
-.imgage--splash {
+.image--splash {
 }
 
 .image--menu {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   height: 15rem;
   transform: rotate(-20deg);
-  opacity: 0.95;
+  opacity: 1000;
   // float: right;
   margin: 5rem 0 0 0;
   border-radius: .3em;
@@ -466,19 +483,40 @@ a.anchor {
   margin: 0 auto;
   border-radius: 50%;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  // z-index: 50;
 }
 
+.image--brand {
+  float: left;
+  // width: 2rem;
+  height: 2rem;
+  padding: 0;
+  margin: auto auto;
+}
+
+.image--raspberry-pi {
+  width: 90%;
+  margin: 0 auto;
+  transform: rotate(20deg);
+}
 
 // Icons
 
 .fa-linkedin-square {
   color: #0077B5;
   transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-
+  // float: left;
+  margin: auto 0;
+  // position: absolute;
+  // z-index: 51;
 
   &:hover {
     color: #158DC7;
     cursor: pointer;
+    -webkit-transform: scale(1.1, 1.1);
+      transform: scale(1.1, 1.1);
+
   }
 
 }
@@ -673,6 +711,13 @@ a.anchor {
      .container__team-member-photo {
          width: 60%;
          margin: 0.5rem auto;
+     }
+
+     .splash-section-2 {
+       .col {
+         min-width: 100vw;
+         margin: 3rem 0 0 0;
+       }
      }
 
 
