@@ -1,0 +1,28 @@
+- step: 1
+  icon: <i class="fa fa-camera" aria-hidden="true"></i>
+  subtitle: Camera built into sunglasses captures an image of the environment
+
+- step: 2
+  icon: <i class="fa fa-cloud-upload" aria-hidden="true"></i>
+  subtitle: <span class="bold">Raspberry Pi Zero W</span> uploads image to Google Cloud Platform through the Google Cloud Vision API
+
+- step: 3
+  icon: <i class="fa fa-search" aria-hidden="true"></i>
+  subtitle: <span class="bold">Google Cloud Platform</span> uses machine learning models to quickly detect printed text, logos, and object labels in the image
+
+- step: 4
+  icon: <i class="fa fa-cloud-download" aria-hidden="true"></i>
+  subtitle: Device recieves a response from the API request with detected text, logos, and labels in a .json file.
+
+- step: 6
+  icon: <i class="fa fa-file-audio-o" aria-hidden="true"></i>
+  subtitle: The Google Text-to-speech API is used to convert the detected features into an .mp3 audio file.
+
+- step: 7
+  icon: <i class="fa fa-headphones" aria-hidden="true"></i>
+  subtitle: The audio file is played back to the user through connected  headphones.
+
+
+- step: 8
+  icon: <i class="fa fa-repeat" aria-hidden="true"></i>
+  subtitle: The process repeats at a desired interval.

@@ -1,0 +1,12 @@
+{% for feature in site.data.features %}
+  <div class="container container--step">
+    <div class="row row-no-margin">
+      <div class="col-md-2">
+        <h4>{{ feature.icon}}</h4>
+      </div>
+      <div class="col-md-10">
+        {{ feature.subtitle}}
+      </div>
+    </div>
+  </div>
+{% endfor %}

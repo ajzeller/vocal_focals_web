@@ -1,0 +1,15 @@
+- feature: 1
+  icon: <i class="fa fa-low-vision" aria-hidden="true"></i>
+  subtitle: A wearable device that recognizes printed text, logos, and object labels in the environment and relays this to the wearer over audio.
+
+- step: 2
+  icon: <i class="fa fa-map-signs" aria-hidden="true"></i>
+  subtitle: Capable of reading common objects like street signs, menus, flyers, mail, and business cards.
+
+- step: 3
+  icon: <i class="fa fa-language" aria-hidden="true"></i>
+  subtitle: Automatically detects language and translates to English if necessary
+
+- step: 3
+  icon:   <i class="fa fa-code" aria-hidden="true"></i>
+  subtitle: Made using the Raspberry Pi Zero W, Google Cloud Platform, and GitHub.

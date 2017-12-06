@@ -6,13 +6,17 @@ permalink: /
 ---
 
 <div class="container-fluid container--hero container--gradient-bg">
+  <div class="container-fluid container--down-arrow">
+    <i class="fa fa-chevron-down" aria-hidden="true"></i>
+  </div>
+
   <div class="container">
     <div class="container">
-      <h4><span class="bold">Reading the unreadable</span> <span class="regular">using machine learning.</span> </h4>
+      <h4>A wearable text recognition device <span class="regular">for the visually impaired.</span> </h4>
     </div>
     <p>
 
-    <div class="container" id="trigger">
+    <div class="container">
       <a href="https://github.com/ajzeller/vocal_focals">
         <button type="button" class="btn btn--primary btn--hover-float-up">Github</button>
       </a>
@@ -28,34 +32,79 @@ permalink: /
   </div>
 
   <div class="container">
-    <div class="row">
-      <div class="col-md-4">
-        <img src="assets/flyer.svg" class="image image--splash image--flyer" />
-      </div>
-
-      <div class="col-md-4">
-        <img src="assets/menu.svg" class="image image--splash image--menu" id="animate" />
-      </div>
-
-      <div class="col-md-4">
-        <img src="assets/street-sign.svg" class="image image--splash image--sign" />
-      </div>
-    </div>
-
+    <iframe class="video-embed" src="https://drive.google.com/file/d/1doU-CL06gL_IKJgcyKH42CP71fgm-w8u/preview"></iframe>
   </div>
-
-
 
 </div>
 
-<div class="container splash-section-2">
-  <div class="row">
-    <div class="col col-md-4">
-      <img src="assets/icons/raspberry_pi.svg" class="image image--splash image--raspberry-pi" />
-    </div>
-    <div class="col col-md-4">
-      <h4>Made using the Raspberry Pi Zero W.</h4>
-      <hr />
+<div class="container-fluid splash-section-3">
+  <div class="container">
+    <h4>What is it?</h4>
+
+    <div class="row">
+      <!-- <div class="col-md-4">
+        <img src="assets/flyer.svg" class="image image--splash image--flyer" id="#animate1" />
+      </div> -->
+
+      <div class="col-md-4">
+        <img src="assets/menu.svg" class="image image--splash image--menu" id="animate" />
+        <img src="assets/street-sign.svg" class="image image--splash image--sign" />
+
+      </div>
+
+      <div class="col-md-8">
+
+        {% include features.html %}
+
+        <p>
+
+
+
+        </p>
+      </div>
+
     </div>
   </div>
+</div>
+
+
+
+<div class="container splash-section-2">
+  <div class="container">
+    <h4>How does it work?</h4>
+
+    <div class="row">
+      <div class="col-md-8">
+        {% include steps.html %}
+
+      </div>
+
+      <div class="col-md-4">
+        <img src="assets/icons/raspberry_pi.svg" class="image image--splash image--raspberry-pi" />
+        <img src="assets/images/gcp-logo.png" class="image image--splash image--gcp" />
+
+
+      </div>
+
+
+    </div>
+
+
+
+  </div>
+
+<p>
+  <div class="container container--buttons-centered">
+    <a href="https://github.com/ajzeller/vocal_focals">
+      <button type="button" class="btn btn--primary btn--hover-float-up">Github</button>
+    </a>
+
+    <a href="{{ site.url }}/docs">
+      <button type="button" class="btn btn--secondary btn--hover-float-up">Documentation</button>
+    </a>
+  </div>
+
+</p>
+
+
 </div>

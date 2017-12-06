@@ -1,0 +1,12 @@
+{% for step in site.data.steps %}
+  <div class="container container--step">
+    <div class="row row-no-margin">
+      <div class="col-md-2">
+        <h4>{{ step.icon}}</h4>
+      </div>
+      <div class="col-md-10">
+        {{ step.subtitle}}
+      </div>
+    </div>
+  </div>
+{% endfor %}
