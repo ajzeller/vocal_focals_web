@@ -411,6 +411,11 @@ pre {
     margin: 0 0 0 0rem;
 }
 
+pre {
+  border: 1px solid $light-grey-border;
+  background-color: $off-white;
+}
+
 // Headers
 
 .header {

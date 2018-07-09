@@ -1,4 +1,4 @@
-$(document).ready(function(){
+
 
 // init controller
 	var controller = new ScrollMagic.Controller();
@@ -7,9 +7,10 @@ $(document).ready(function(){
 	var scene = new ScrollMagic.Scene({
 						triggerElement: "#trigger"
 					})
-					.setTween("#animate1", 0.5, {backgroundColor: "green", scale: 2.5}) // trigger a TweenMax.to tween
-					.addIndicators({name: "1 (duration: 0)"}) // add indicators (requires plugin)
+					.setVelocity(".animate1", {opacity: 0}, {duration: 400}) // trigger a TweenMax.to tween
+					// .addIndicators() // add indicators (requires plugin)
 					.addTo(controller);
+
 					// trigger a velocity opaticy animation
 					// $("#animate")
 					// 	.velocity("slideDown", { duration: 1500 })
@@ -19,5 +20,3 @@ $(document).ready(function(){
 					// .setVelocity("#animate", {opacity: 100}, {duration: 400})
 					// .addIndicators() // add indicators (requires plugin)
 					// .addTo(controller);
-
-});
